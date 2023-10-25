@@ -1,0 +1,15 @@
+.navbar {
+  a {
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #EC5863;
+    }
+  }
+}
+
+.navbar-nav {
+  @media screen and (max-width: 992px) {
+    align-items: center;
+  }
+}
