@@ -7,11 +7,12 @@ import {GeneralTableService} from "./services/general-table.service";
 import {HttpClientModule} from "@angular/common/http";
 import { FilteringFormComponent } from './components/general-table/filtering-form/filtering-form.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { DateFormComponent } from './components/brief-information/date-form/date-form.component';
 
 
 
 @NgModule({
-  declarations: [GeneralTableComponent, BriefInformationComponent, FilteringFormComponent],
+  declarations: [GeneralTableComponent, BriefInformationComponent, FilteringFormComponent, DateFormComponent],
   imports: [
     CommonModule,
     FinancialDashboardRoutingModule,

@@ -1,1 +1,43 @@
-<p>brief-information!</p>
+<div class="brief-information">
+  <div class="brief-information container-md">
+    <app-date-form (handleForm)="handleMetrics($event)"></app-date-form>
+    <div class="brief-information__metrics metrics d-flex mt-5 mb-5">
+      <div class="metrics__item metrics-item metrics__total-number-issued">
+        <div class="metrics-item__wrapper">
+          <span class="metrics-item__count"> {{ metrics.totalNumberIssued }}</span>
+          <span class="metrics-item__text">Total issued</span>
+        </div>
+      </div>
+      <div class="metrics__item metrics-item metrics__average-amount-issued">
+        <div class="metrics-item__wrapper">
+          <span class="metrics-item__count">{{ metrics.averageAmountIssued }}</span>
+          <span class="metrics-item__text">Average Amount</span>
+        </div>
+      </div>
+      <div class="metrics__item metrics-item metrics__total-amount">
+        <div class="metrics-item__wrapper">
+          <span class="metrics-item__count">{{ metrics.totalAmount }}</span>
+          <span class="metrics-item__text">Total amount</span>
+        </div>
+      </div>
+      <div class="metrics__item metrics-item metrics__total-amount-percent">
+        <div class="metrics-item__wrapper">
+          <span class="metrics-item__count">{{ metrics.totalAmountPercent }}</span>
+          <span class="metrics-item__text">Total amount percent</span>
+        </div>
+      </div>
+      <div class="metrics__item metrics-item metrics__issued-number">
+        <div class="metrics-item__wrapper">
+          <span class="metrics-item__count">{{ metrics.issuedNumber}}</span>
+          <span class="metrics-item__text">Issued</span>
+        </div>
+      </div>
+      <div class="metrics__item metrics-item metrics__returnees-number">
+        <div class="metrics-item__wrapper">
+          <span class="metrics-item__count">{{ metrics.returneesNumber }}</span>
+          <span class="metrics-item__text">Returned</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

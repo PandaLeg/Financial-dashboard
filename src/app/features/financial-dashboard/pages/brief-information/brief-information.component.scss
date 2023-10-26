@@ -1,0 +1,74 @@
+.metrics {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  &__item {
+    flex: 0 1 calc(33.333% - 10px);
+  }
+
+  &__total-number-issued {
+    background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
+    color: #fff;
+  }
+
+  &__average-amount-issued {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  }
+
+  &__total-amount {
+    background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
+    color: #fff;
+  }
+
+  &__total-amount-percent {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  }
+
+  &__issued-number {
+    background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
+    color: #fff;
+  }
+
+  &__returnees-number {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  }
+
+  @media screen and (max-width: 767.98px) {
+    &__item {
+      flex: 0 1 calc(50% - 10px);
+    }
+  }
+
+  @media screen and (max-width: 575.98px) {
+    gap: 20px;
+
+    &__item {
+      flex: 0 1 100%;
+    }
+  }
+}
+
+.metrics-item {
+  box-shadow: 2px 2px 15px rgb(128 142 184 / 30%);
+  border-radius: 20px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+  }
+
+  &__count {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__text {
+    font-weight: 700;
+    word-break: break-word;
+  }
+}
