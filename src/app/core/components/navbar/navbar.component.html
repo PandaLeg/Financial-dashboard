@@ -1,22 +1,55 @@
-<header class="header">
-  <div class="header__content">
-    <nav class="navbar bg-primary navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a routerLink="" class="navbar-brand">Financial dashboard</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a routerLink="" class="nav-link text-bg-10">General Table</a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="/brief-info" class="nav-link">Brief information</a>
-            </li>
-          </ul>
-        </div>
+<nav
+  class="sidebar"
+  [ngClass]="{'close': isOpen}"
+>
+  <header class="sidebar__header header-sidebar">
+    <div class="header-sidebar__image-text">
+      <div class="sidebar__text header-sidebar__text">
+        <span class="header-sidebar__title">Financial dashboard</span>
       </div>
-    </nav>
+    </div>
+
+    <i
+      class="sidebar__toggle _icon-arrow-right-solid"
+      (click)="toggleSidebar()"
+    >
+    </i>
+  </header>
+
+  <div class="sidebar__menu menu-sidebar">
+    <div class="menu-sidebar__body">
+      <div class="menu-sidebar__search-box">
+        <i class="menu-sidebar__icon _icon-magnifying-glass-solid"></i>
+        <input type="search" placeholder="Search...">
+      </div>
+
+      <ul class="menu-sidebar__links">
+        <li>
+          <a
+            routerLink=""
+            class="menu-sidebar__link"
+          >
+            <i class="menu-sidebar__icon _icon-table-solid"></i>
+            <span class="sidebar__text menu-sidebar__text">General Table</span>
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/brief-info"
+            class="menu-sidebar__link"
+          >
+            <i class="menu-sidebar__icon _icon-infinity-solid"></i>
+            <span class="sidebar__text menu-sidebar__text">Brief information</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="menu-sidebar__bottom-content">
+      <a class="menu-sidebar__link">
+        <i class="menu-sidebar__icon _icon-logout"></i>
+        <span class="sidebar__text menu-sidebar__text">Logout</span>
+      </a>
+    </div>
   </div>
-</header>
+</nav>
