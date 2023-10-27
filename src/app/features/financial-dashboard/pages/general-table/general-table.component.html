@@ -1,0 +1,49 @@
+<div class="general-table">
+  <div class="general-table__container container-md">
+    <app-filtering-form
+      (handleForm)="handleForm($event)"
+      (resetForm)="resetForm()"
+    >
+    </app-filtering-form>
+    <div class="d-flex justify-content-center">
+      <div
+        *ngIf="isLoading"
+        class="spinner-border text-center"
+        role="status"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div
+      *ngIf="borrowers | async as borrowers"
+      class="overflow-x-auto m-auto"
+    >
+      <table class="general-table__table table table-responsive mt-5">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">User</th>
+          <th scope="col">Issuance date</th>
+          <th scope="col">Return date</th>
+          <th scope="col">Actual return date</th>
+          <th scope="col">Body</th>
+          <th scope="col">Percent</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let borrower of borrowers; let i = index">
+          <th scope="row">{{ borrower.id }}</th>
+          <td>{{ borrower.user }}</td>
+          <td>{{ borrower.issuance_date }}</td>
+          <td>{{ borrower.return_date }}</td>
+          <td>{{ borrower.actual_return_date }}</td>
+          <td>{{ borrower.body }}</td>
+          <td>{{ borrower.percent }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+

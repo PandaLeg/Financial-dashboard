@@ -1,0 +1,45 @@
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.filtering-form {
+  background: #fff;
+  box-shadow: 2px 2px 15px rgb(128 142 184 / 30%);
+  border-radius: 10px;
+
+  &__search {
+    & button:first-child {
+      margin-right: 15px;
+    }
+  }
+
+  @media screen and (max-width: 767.98px) {
+    &__issuance-date, &__actual-date {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 499.98px){
+    &__search {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      & button:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.issuance-date__from, .actual-date__from {
+  margin-right: 1rem;
+
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+}

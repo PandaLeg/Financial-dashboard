@@ -1,0 +1,55 @@
+<nav
+  class="sidebar"
+  [ngClass]="{'close': isOpen}"
+>
+  <header class="sidebar__header header-sidebar">
+    <div class="header-sidebar__image-text">
+      <div class="sidebar__text header-sidebar__text">
+        <span class="header-sidebar__title">Financial dashboard</span>
+      </div>
+    </div>
+
+    <i
+      class="sidebar__toggle _icon-arrow-right-solid"
+      (click)="toggleSidebar()"
+    >
+    </i>
+  </header>
+
+  <div class="sidebar__menu menu-sidebar">
+    <div class="menu-sidebar__body">
+      <div class="menu-sidebar__search-box">
+        <i class="menu-sidebar__icon _icon-magnifying-glass-solid"></i>
+        <input type="search" placeholder="Search...">
+      </div>
+
+      <ul class="menu-sidebar__links">
+        <li>
+          <a
+            routerLink=""
+            class="menu-sidebar__link"
+          >
+            <i class="menu-sidebar__icon _icon-table-solid"></i>
+            <span class="sidebar__text menu-sidebar__text">General Table</span>
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/brief-info"
+            class="menu-sidebar__link"
+          >
+            <i class="menu-sidebar__icon _icon-infinity-solid"></i>
+            <span class="sidebar__text menu-sidebar__text">Brief information</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="menu-sidebar__bottom-content">
+      <a class="menu-sidebar__link">
+        <i class="menu-sidebar__icon _icon-logout"></i>
+        <span class="sidebar__text menu-sidebar__text">Logout</span>
+      </a>
+    </div>
+  </div>
+</nav>

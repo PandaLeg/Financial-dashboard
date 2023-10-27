@@ -1,0 +1,96 @@
+<div class="form-container">
+  <form
+    [formGroup]="form"
+    class="filtering-form d-flex flex-column mb-3 mt-5 p-3"
+  >
+    <div class="filtering-form__issuance-date d-flex mb-3">
+      <div class="issuance-date__from flex-grow-1">
+        <label
+          for="issue-date-from"
+          class="form-label"
+        >
+          Issuance date from
+        </label>
+        <input
+          type="date"
+          class="form-control"
+          id="issue-date-from"
+          formControlName="issuanceDateFrom"
+        >
+      </div>
+      <div class="issuance-date__to flex-grow-1">
+        <label
+          for="issue-date-to"
+          class="form-label"
+        >
+          Issuance date to
+        </label>
+        <input
+          type="date"
+          class="form-control"
+          id="issue-date-to"
+          formControlName="issuanceDateTo"
+        >
+      </div>
+    </div>
+    <div class="filtering-form__actual-date d-flex mb-3">
+      <div class="actual-date__from flex-grow-1">
+        <label
+          for="actual-date-from"
+          class="form-label"
+        >
+          Actual date from
+        </label>
+        <input
+          type="date"
+          class="form-control"
+          id="actual-date-from"
+          formControlName="actualDateFrom"
+        >
+      </div>
+      <div class="actual-date__to flex-grow-1">
+        <label
+          for="actual-date-to"
+          class="form-label"
+        >
+          Actual date to
+        </label>
+        <input
+          type="date"
+          class="form-control"
+          id="actual-date-to"
+          formControlName="actualDateTo"
+        >
+      </div>
+    </div>
+    <div class="filtering-form__check-overdue form-check">
+      <label class="form-check-label" for="checkOverdue">
+        Overdue credits
+      </label>
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="checkOverdue"
+        formControlName="checkOverdue"
+      >
+    </div>
+    <div class="filtering-form__search text-end">
+      <button
+        type="button"
+        class="btn btn-dark"
+        (click)="reset()"
+      >
+        Reset
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-dark"
+        (click)="search()"
+      >
+        Search
+      </button>
+    </div>
+  </form>
+</div>
