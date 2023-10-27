@@ -62,9 +62,11 @@ export class BriefInformationComponent implements OnInit {
       returneesNumber += actualReturnDate && this.isActualDateEqualToSelected(actualReturnDate, selectedDate) ? 1 : 0
     })
 
+    averageAmountIssued = (averageAmountIssued && borrowers.length) !== 0 ? Math.round(averageAmountIssued / borrowers.length) : 0
+
     return {
       totalNumberIssued,
-      averageAmountIssued: Math.round(averageAmountIssued / borrowers.length),
+      averageAmountIssued,
       totalAmount: Math.round(totalAmount),
       totalAmountPercent: Math.round(totalAmountPercent),
       issuedNumber,
